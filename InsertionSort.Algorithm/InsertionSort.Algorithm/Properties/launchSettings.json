@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "InsertionSort.Algorithm": {
+      "commandName": "Project"
+    },
+    "Container (Dockerfile)": {
+      "commandName": "Docker"
+    }
+  }
+}
