@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "Tree.Data.Structures": {
+      "commandName": "Project"
+    },
+    "Container (Dockerfile)": {
+      "commandName": "Docker"
+    }
+  }
+}
