@@ -4,7 +4,7 @@
     {
         public required string ProductName { get; set; }
         public required decimal ProductPrice { get; set; }
-        public required Node Left { get; set; }
-        public required Node Right { get; set; }
+        public Node? Left { get; set; }
+        public Node? Right { get; set; }
     }
 }
