@@ -1,8 +1,8 @@
 ﻿namespace Tree.Data.Structures.BinaryTree
 {
-    public class Node(int value)
+    public class Node(string value)
     {
-        public int Value { get; set; } = value;
+        public string Value { get; set; } = value;
 
         public Node? Left { get; set; }
 
