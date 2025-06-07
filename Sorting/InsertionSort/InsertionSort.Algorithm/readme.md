@@ -55,3 +55,6 @@ public static class InsertionSorting
     }
 }
 ```
+
+📘 Want to learn when to use which sorting algorithm?  
+Check out the [Sorting Algorithm Trade-offs](./trade-offs.md)
