@@ -15,6 +15,7 @@ A Binary Tree has one simple, unbreakable rule that separates it from a general 
 That's it. These children are given special names: a **Left Child** and a **Right Child**.
 
 This simple constraint seems limiting, but it unlocks incredible power, especially when we add one more small rule to create a **Binary Search Tree (BST)**.
+And the rule is: **those two children should be ordered under the Node**.
 
 ### The Perfect Analogy: The "Higher or Lower" Guessing Game
 
