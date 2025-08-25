@@ -76,13 +76,12 @@ Our Binary Tree `Node` is simpler than our general tree node. Instead of a `List
 // Node.cs
 public class Node(int value)
 {
-    // The integer value this node holds
     public int Value { get; set; } = value
 
-    // The reference to the left child node (values smaller than this node)
+    // Left child node (values smaller than this node)
     public Node? Left { get; set; }
 
-    // The reference to the right child node (values larger than this node)
+    // Right child node (values larger than this node)
     public Node? Right { get; set; }
 }
 ```
@@ -102,49 +101,39 @@ public class BinarySearchTree
         Root = null;
     }
 
-    // The core logic for adding a new value to the tree
     public void Insert(int value)
     {
         var newNode = new Node(value);
 
-        // Case 1: The tree is empty, so this new node is the root.
         if (Root == null)
         {
             Root = newNode;
             return;
         }
 
-        // Case 2: The tree is not empty. Find the correct spot.
         Node current = Root;
         while (true)
         {
-            // If the new value is less than the current node's value, go left.
             if (value < current.Value)
             {
-                // If there's no left child, this is the spot.
                 if (current.Left == null)
                 {
                     current.Left = newNode;
-                    break; // Exit the loop
+                    break;
                 }
-                // Otherwise, keep moving down the left side.
                 current = current.Left;
             }
-            // If the new value is greater than the current node's value, go right.
             else if (value > current.Value)
             {
-                // If there's no right child, this is the spot.
                 if (current.Right == null)
                 {
                     current.Right = newNode;
-                    break; // Exit the loop
+                    break;
                 }
-                // Otherwise, keep moving down the right side.
                 current = current.Right;
             }
             else
             {
-                // The value already exists in the tree. We'll just ignore it.
                 break;
             }
         }
@@ -175,8 +164,6 @@ public class Program
 
         Console.WriteLine("\nTree construction complete!");
 
-        // --- Let's verify our structure ---
-        // We can manually check a few nodes to see if they are in the right place.
         if (bst.Root != null)
         {
             Console.WriteLine($"\nRoot node is: {bst.Root.Value}"); // Expected: 50
